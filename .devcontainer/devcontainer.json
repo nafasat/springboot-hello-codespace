@@ -1,0 +1,25 @@
+{
+    "image":"mcr.microsoft.com/devcontainers/java:17",
+    "features": {
+    	"ghcr.io/devcontainers/features/java:1.2.1": {
+      		"version": "17",
+      		"installMaven": "true",
+      		"installGradle": "false"
+    	}
+    },
+    "forwardPorts": [8080],
+    "postCreateCommand": "mvn install",
+    "customizations": {
+	    "vscode": {
+		    "extensions": [
+			    "dbaeumer.vscode-eslint",
+			    "vscjava.vscode-java-pack"
+		    ],
+		    "settings": {
+			    "editor.frontSize": 24,
+			    "terminal.integrated.fontSize": 16,
+			    "terminal.integrated.localEchoStyle": "dim"
+			}
+		}
+	}
+}
